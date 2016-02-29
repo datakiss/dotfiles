@@ -1,0 +1,10 @@
+; generated_rule undec
+( if 
+( begin 
+( not ( is ( application_name ) "Terminator" ) )
+) 
+( begin 
+( undecorate )
+( println "match" )
+)
+)

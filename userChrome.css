@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.tab-close-button, .tabs-newtab-button, #back-button, #forward-button, .tab-icon-image {
+	display: none !important;
+}
+
+#TabsToolbar { height: 15px !important; }
+
+.tabbrowser-tabs { 
+	height: 15px !important; 
+	min-height: 15px !important;
+}
+
+.tab-content { padding-bottom: 12px !important; }
+
+#content browser{margin-right:-13px!important;overflow-y:scroll;} 
+
+#private-browsing-indicator { display: none !important; }
