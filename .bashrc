@@ -116,12 +116,37 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# HADOOP
+# export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+# export HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar"
 
-export NVM_DIR="/home/datakiss/.nvm"
+# SPARK
+export SPARK_HOME="$HOME/spark/spark-2.0.0-bin-hadoop2.7"
+# export YARN_CONF_DIR="$HOME/spark/hadoop-conf"
+export PATH="$PATH:$HOME/spark/spark-2.0.0-bin-hadoop2.7/bin:$HOME/spark/spark-2.0.0-bin-hadoop2.7/sbin"
+
+
+# SSH
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
+# PYENV
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export PATH="$HOME/.activator:$PATH"
+
+# RBENV
+export PATH="$HOME/.rbenv/bin:$HOME/bin:$PATH"
+eval "$(rbenv init -)"
+
+# oh-my-git
+# source $HOME/.oh-my-git/prompt.sh
+
+# bash-git-prompt
+source ~/.bash-git-prompt/gitprompt.sh
+GIT_PROMPT_ONLY_IN_REPO=1
+
+# airflow
+export AIRFLOW_HOME=$HOME/airflow/airflow
